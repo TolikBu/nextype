@@ -1,0 +1,84 @@
+.cards
+  padding: 29px 0 80px
+  &-items
+    width: 100%
+    @include flex
+    position: relative
+    &__card
+      max-width: 320px
+      height: 472px
+      border: 1px solid #E1E1E6
+      overflow: hidden
+      cursor: pointer
+      z-index: 99
+      &:hover
+        box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1)
+      &:not(:last-childe)
+        margin-right: 16px
+      &-image
+        width: 100%
+        height: 320px
+        transition: .3s
+        margin-bottom: 23px
+      &-text, &-tags
+        margin: 0
+        margin-bottom: 24px
+        padding: 0 32px
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        color: $gray
+      &-tags
+        padding: 0 32px
+        color: #2244CC
+    &__gradient
+      position: absolute
+      height: 48px
+      left: 0
+      right: 0
+      bottom: 32px
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 22%, #FFFFFF 100%)
+    &__fill
+      position: absolute
+      height: 32px
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: #fff
+  &__left, &__right
+    position: absolute
+    top: 178px
+    cursor: pointer
+    z-index: 200
+    width: 44px
+    height: 44px
+    padding: 15px
+    background-color: #fff
+    @media (max-width: 992px)
+      display: none
+  &__left
+    left: -22px
+  &__right
+    right: -22px
+.cards-items__card
+  &:hover
+    padding-top: 0
+    > .cards-items__card-text
+      padding: 0 48px 0 32px
+    &::after, &::before
+      content: ''
+      position: absolute
+      width: 1px
+      height: 359px
+      top: 32px
+      right: 24px
+      bottom: 32px
+      background-color: #2244CC
+    &::before
+      height: 407px
+      background-color: #E1E1E6
+    > img
+      transform: translateY(-100%)
+      height: 0
+      transition: .3s

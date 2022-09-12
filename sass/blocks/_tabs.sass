@@ -1,0 +1,30 @@
+.tabs-items
+  width: 100%
+  padding: 31px 0 16px
+  display: flex
+  align-items: center
+  justify-content: start
+  border-bottom: 1px solid #E1E1E6
+  &__item
+    position: relative
+    font-style: normal
+    font-weight: 700
+    font-size: 18px
+    line-height: 26px
+    color: $gray
+    border-bottom: 2px solid #fff
+    cursor: pointer
+    &:hover::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 2px
+      left: 0
+      bottom: -19px
+      background-color: $navy
+    &:not(:last-child)
+      margin-right: 40px
+    @media (max-width: 576px)
+      &:nth-child(1), &:nth-child(2)
+        display: none
+

@@ -1,0 +1,33 @@
+*
+  box-sizing: border-box
+
+body
+  font-family: 'Roboto', sans-serif
+  background-color: $bgc
+  color: $text
+
+.container
+  position: relative
+  max-width: 1328px
+  margin: auto
+  @media (max-width: 1368px)
+    width: 90%
+
+.swiper-pagination-bullets.swiper-pagination-horizontal
+  bottom: -41px
+  display: none
+  @media (max-width: 992px)
+    display: block
+
+.swiper-pagination-bullet
+  width: 16px
+  height: 4px
+  border-radius: 0%
+  background: #191928
+  opacity: 0.5
+
+.swiper-pagination-bullet-active
+  width: 24px
+  height: 4px
+  opacity: 1
+  background: #2244CC
